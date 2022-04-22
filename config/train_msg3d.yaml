@@ -1,0 +1,41 @@
+work_dir: ./work_dir/buhmap_msg3d
+device: [0]
+num_repeats: 10
+# feeder
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ./data/BUHMAP/landmarks_2s_60f/BUHMAP_full_data.pkl
+  flip: True
+  normalization: True
+
+# model
+model: model.GCNs.msg3d.Model
+# model: model.CNNs.cnns.Model3
+# model: model.CNNs.mobilenet.Model
+model_args:
+  in_channels: 2 # 2 for landmarks or 1 for action units
+  num_class: 8 #  4 for LSE_GFE or 8 for BUHMAP
+  num_point: 68 # 68 for facial landmarks or 18 for action units
+  num_person: 1
+  # Just for MSG3D
+  num_gcn_scales: 1
+  num_g3d_scales: 1
+  graph: graph.base.AdjMatrixGraph
+  a_res: 3
+  # Just for CNNs:
+  hidden_neurons: 64 
+  hidden_neurons: 256 
+  window_size: 60  
+
+# optim
+weight_decay: 0.0003
+base_lr: 0.01
+step: [45, 55]
+
+# training
+num_epoch: 65
+batch_size: 32
+forward_batch_size: 16
+test_batch_size: 32
+nesterov: True
+save_interval: 100
