@@ -1,8 +1,8 @@
 # GrammaticalFacialExpressions
 Classification of Grammatical Facial Expressions through Neural Networks based in facial landmarks and action units.
 
-PyTorch implementation of "Facial motion analysis beyond emotional expressions". [[arXiv]()]
-[//]: # <img src="imgs/cropped-fixed-standup.gif" width="24%"><img src="imgs/cropped-fixed-clap.gif" width="24%">
+PyTorch implementation of "Facial motion analysis beyond emotional expressions". [[arXiv](TODO)]
+<!--- <img src="imgs/cropped-fixed-standup.gif" width="24%"><img src="imgs/cropped-fixed-clap.gif" width="24%"> --->
 
 
 ## Dependencies
@@ -80,6 +80,7 @@ TODO
 ## Acknowledgements
 
 This repo is based on [MS-G3D](https://github.com/kenziyuliu/MS-G3D)
+BUHMAP dataset was created by [Boğaziçi University](https://www.cmpe.boun.edu.tr/pilab/pilabfiles/databases/buhmap/)
 
 Thanks to the original authors for their work!
 
