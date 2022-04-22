@@ -79,7 +79,8 @@ TODO
 
 ## Acknowledgements
 
-This repo is based on [MS-G3D](https://github.com/kenziyuliu/MS-G3D)
+This repo is based on [MS-G3D](https://github.com/kenziyuliu/MS-G3D).
+
 BUHMAP dataset was created by [Boğaziçi University](https://www.cmpe.boun.edu.tr/pilab/pilabfiles/databases/buhmap/)
 
 Thanks to the original authors for their work!
