@@ -18,26 +18,27 @@ PyTorch implementation of "Facial motion analysis beyond emotional expressions".
 
 ### Download Datasets
 
-There are 2 datasets to download:
+This model was tested over 2 datasets_
 
 - Boğaziçi University Head Motion Analysis Project Database (BUHMAP)
 - LSE_GFE_UVIGO
 
 #### BUHMAP
 
-Download dataset here: https://www.cmpe.boun.edu.tr/pilab/pilabfiles/databases/buhmap/files/videos.zip
+Buhmap dataset can be directly downloaded here: https://www.cmpe.boun.edu.tr/pilab/pilabfiles/databases/buhmap/files/videos.zip.
+Moreover, the features extracted with OpenFace (2D and 3D facial landmarks as well as Action UnitS) are shared in folder data/BUHMAP_Features. The corresponding annotation data is available in data/BUHMAP_Features/BUHMAP_info.pkl.
 
 
 #### LSE_GFE_UVIGO
 
-Full dataset can't be shared due to data protection matters. Regardless, the extracted features (2D and 3D facial landamarks as well as Action Units) are shared in folder data/LSE_GFE_Features. The annotation data is available in data/LSE_GFE_Features/LSEGFE_info.pkl.
+Full UVIGO dataset can't be shared due to data protection matters. Regardless, the extracted features (2D and 3D facial landamarks as well as Action Units) are shared in folder data/LSE_GFE_Features. The annotation data is available in data/LSE_GFE_Features/LSEGFE_info.pkl.
 
 ### Data Preprocessing
 
 #### Directory Structure
 
-BUHMAP videos should be stored in the same folder keeping their original names.
-On the other hand, LSE_GFE videos should be structured
+BUHMAP videos should be stored in the same folder keeping their original names in order to obtain their features using our scripts.
+On the other hand, LSE_GFE videos should be structured as follows:
 ```
 - base_folder/
   - pxxxx/
@@ -57,17 +58,20 @@ Furthermore, annotations files for LSE_GFE should be placed on a single folder i
 
 #### Generating Data
 
-1. Execute: 'extract_features_DATASET.py --[desired_parameters (check code)]'
+1. To obtain the features (landmarks or action units) from the videos (only for BUHMAP case) execute: 
+  'extract_features_DATASET.py --[desired_parameters (check code)]'
 
-2. Execute 'process_features_DATASET.py --[desired_parameters (check code)]'
+2. To process the extracted features to a suitable format for the model data feeder execute 
+  'process_features_DATASET.py --[desired_parameters (check code)]'
+  indicating the base folder of the extracted features files.
 
 
 ## Pretrained Models
 
-TODO
+To enable fast replication of the model, a set of trained weigths for each dataset are shared in the folder trained_model. Such weights correspond to msg3d models with 1 single scale for both spatial and 3D convolutions and were trained using an empty graph and data augmentation by horizontal flipping.
 
 
-## Training & Testing
+## Training
 
 - The general training template command:
 `python3 train_loso_repeat.py --config <config file>`
