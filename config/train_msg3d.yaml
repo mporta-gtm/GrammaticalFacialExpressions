@@ -4,7 +4,7 @@ num_repeats: 10
 # feeder
 feeder: feeders.feeder.Feeder
 train_feeder_args:
-  data_path: ./data/BUHMAP/landmarks_2s_60f/BUHMAP_full_data.pkl
+  data_path: ./data/BUHMAP_Features/path_to_processed_samples.pkl
   flip: True
   normalization: True
 
