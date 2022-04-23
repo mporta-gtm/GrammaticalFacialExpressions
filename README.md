@@ -30,7 +30,7 @@ Download dataset here: https://www.cmpe.boun.edu.tr/pilab/pilabfiles/databases/b
 
 #### LSE_GFE_UVIGO
 
-1. Download dataset from: TODO
+Full dataset can't be shared due to data protection matters. Regardless, the extracted features (2D and 3D facial landamarks as well as Action Units) are shared in folder data/LSE_GFE_Features. The annotation data is available in data/LSE_GFE_Features/LSEGFE_info.pkl.
 
 ### Data Preprocessing
 
