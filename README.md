@@ -93,8 +93,20 @@ Thanks to the original authors for their work!
 ## Citation
 
 Please cite this work if you find it useful:
+https://www.mdpi.com/1424-8220/22/10/3839
 
-TODO
+@Article{s22103839,
+AUTHOR = {Porta-Lorenzo, Manuel and Vázquez-Enríquez, Manuel and Pérez-Pérez, Ania and Alba-Castro, José Luis and Docío-Fernández, Laura},
+TITLE = {Facial Motion Analysis beyond Emotional Expressions},
+JOURNAL = {Sensors},
+VOLUME = {22},
+YEAR = {2022},
+NUMBER = {10},
+ARTICLE-NUMBER = {3839},
+URL = {https://www.mdpi.com/1424-8220/22/10/3839},
+ISSN = {1424-8220},
+DOI = {10.3390/s22103839}
+}
 
 ## Contact
 Please email `mporta@gts.uvigo.es` for further questions
